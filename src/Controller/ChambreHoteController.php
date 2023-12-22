@@ -132,7 +132,7 @@ public function delete(Request $request,$id):Response
     $entityManager->flush();
     return $this->redirectToRoute('HOME');
 }
-      
+       
  
 
 }
