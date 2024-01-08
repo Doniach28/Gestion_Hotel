@@ -3,7 +3,7 @@
 {% block title %}Les Chambres{% endblock %}
 
 {% block body %}
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f2f2f2;">
   <div style="width: 80%; max-width: 1200px; padding: 20px;">
 
     <h2 style="text-align: center;">Liste des Chambres | <small><a href="{{ path('Ajouter')}}">Ajouter</a></small></h2>
@@ -34,7 +34,7 @@
                     
                     <a class="btn btn-info" href="{{ path('edit_user', {'id': chambre_hote.id }) }}">Modifier</a>
                     <a class="btn btn-danger" href="{{ path('cand_delete', {'id': chambre_hote.id }) }}"
-                       onclick="return confirm('Are you sure to delete! {{ chambre_hote.nomChambre }}')">Supprimer</a>
+                       onclick="return confirm('Êtes-vous sûr de vouloir supprimer ! {{ chambre_hote.nomChambre }}')">Supprimer</a>
                 </td>
             </tr>
         {% else %}
@@ -48,4 +48,5 @@
   </div>
 </div>
 {% endblock %}
+
 
