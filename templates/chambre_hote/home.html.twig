@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}Les Chambres{% endblock %}
 
 {% block body %}
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="width: 80%; max-width: 1200px; padding: 20px;">
 
-    <h2>Liste des Chambres | <small> <a href="{{ path('Ajouter')}}">Ajouter</a>
-    
+    <h2 style="text-align: center;">Liste des Chambres | <small><a href="{{ path('Ajouter')}}">Ajouter</a></small></h2>
 
     {{ form_start(form) }}
     {{ form_widget(form) }}
@@ -43,4 +45,7 @@
         </tbody>
     </table>
 
+  </div>
+</div>
 {% endblock %}
+

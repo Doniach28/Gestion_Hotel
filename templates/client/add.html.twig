@@ -1,9 +1,17 @@
 {% extends 'base.html.twig' %}
-{% block title %}Ajouter Client{% endblock %}
-{% block body %}
 
-<h2> Ajouter un Client </h2>
-{{ form_start(f) }}
-{{ form_widget(f) }}
-{{ form_end (f)}}
+{% block title %}Ajouter Client{% endblock %}
+
+{% block body %}
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="width: 80%; max-width: 600px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+
+    <h2 style="text-align: center;">Ajouter un Client</h2>
+
+    {{ form_start(f, {'attr': {'class': 'my-form'}}) }}
+    {{ form_widget(f) }}
+    {{ form_end(f) }}
+
+  </div>
+</div>
 {% endblock %}

@@ -1,15 +1,21 @@
 {% extends 'base.html.twig' %}
+
 {% block body %}
-<h1>Login </h1>
-{% if error %}
- <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
-<form action="{{ path('login') }}" method="post">
- <label for="username">Username:</label>
- <input type="text" id="username" name="_username" value="{{
-last_username }}"/>
- <label for="password">Password:</label>
- <input type="password" id="password" name="_password"/>
- <button type="submit">login</button>
-</form>
+  <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="width: 300px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+      <h1 style="text-align: center;">Se Connecter</h1>
+      {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+      {% endif %}
+      <form action="{{ path('login') }}" method="post">
+        <label for="username">Nom Utilisateur</label>
+        <input type="text" id="username" name="_username" value="{{ last_username }}" style="width: 100%; margin-bottom: 10px; padding: 8px;">
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="_password" style="width: 100%; margin-bottom: 10px; padding: 8px;">
+        <button type="submit" style="width: 100%; padding: 8px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Se connecter</button>
+      </form>
+    </div>
+  </div>
 {% endblock %}
+
+
