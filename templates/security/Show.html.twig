@@ -1,6 +1,23 @@
 {% extends 'base.html.twig' %}
-{% block title %}Hello SecurityController!{% endblock %}
+
 {% block body %}
-<h1>Detail</h1>
-<h3>{{ user.username }}</h3>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            text-align: center;
+        }
+    </style>
+
+    <div class="content">
+        <h1>Detail</h1>
+        <h3>{{ user.username }}</h3>
+       
+    </div>
 {% endblock %}
